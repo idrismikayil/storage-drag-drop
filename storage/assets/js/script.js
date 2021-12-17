@@ -60,3 +60,5 @@ function totalPrice() {
     }, 0);
     priceElement.innerText = total;
 }
+
+let basket = document.querySelector(".basket")
