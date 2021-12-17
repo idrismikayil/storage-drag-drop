@@ -1,6 +1,3 @@
-let red = document.querySelector(".red")
-let green = document.querySelector(".green")
-let blue = document.querySelector(".blue")
 let circles = document.querySelectorAll(".circle")
 let dropZone = document.querySelectorAll(".drop-zone")
 
@@ -17,5 +14,6 @@ dropZone.forEach((zone) => {
     zone.addEventListener("drop", function (e) {
         let color = e.dataTransfer.getData("color");
         zone.style.backgroundColor = color;
+        zone.style.border = "none";
     });
 });
