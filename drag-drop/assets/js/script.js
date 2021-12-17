@@ -6,7 +6,7 @@ let dropZone = document.querySelectorAll(".drop-zone")
 
 circles.forEach(circle => {
     circle.addEventListener("dragstart", function (e) {
-        e.dataTransfer.setData("text", e.target.id)
+        e.dataTransfer.setData("color", e.target.id)
     })
 })
 
@@ -15,8 +15,7 @@ dropZone.forEach((zone) => {
         e.preventDefault();
     });
     zone.addEventListener("drop", function (e) {
-        console.log("drop");
-        let color = e.dataTransfer.getData("text");
+        let color = e.dataTransfer.getData("color");
         zone.style.backgroundColor = color;
     });
 });
